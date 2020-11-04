@@ -38,6 +38,7 @@ Fully supported devices:
  * RT-AC86U
  * RT-AC2900 (use the RT-AC86U firmware)
  * RT-AX88U
+ * RT-AX92U
  * RT-AX56U
  * RT-AX58U & RT-AX3000
 

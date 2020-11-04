@@ -69,7 +69,7 @@ build_fw()
 	cd "$HOME/$FWPATH" || exit 1
 	if make "$FWMODEL" > "output.txt" 2>&1; then
 		cd image || exit 1
-		if [ "$FWMODEL" = "rt-ac86u" ] || [ "$FWMODEL" = "rt-ax88u" ]; then
+		if [ "$FWMODEL" = "rt-ac86u" ] || [ "$FWMODEL" = "rt-ax88u" ] || [ "$FWMODEL" = "rt-axu" ]; then
 			FWNAME="$(find -- *_cferom_ubi.w | head -n 1)"
 			ZIPNAME="$(echo "$FWNAME" | sed 's~_cferom_ubi.w~~g').zip"
 		elif [ "$FWMODEL" = "rt-ax58u" ] || [ "$FWMODEL" = "rt-ax56u" ]; then
@@ -155,6 +155,9 @@ fi
 if [ "$BAX88" = "y" ]; then
 	clean_tree amng.ax88 release/src-rt-5.02axhnd rt-ax88u master
 fi
+if [ "$BAX92" = "y" ]; then
+	clean_tree amng.ax88 release/src-rt-5.02axhnd rt-ax92u master
+fi
 if [ "$BAX58" = "y" ]; then
 	clean_tree amng.ax58 release/src-rt-5.02axhnd.675x rt-ax58u master
 fi
@@ -201,6 +204,10 @@ if [ "$BAC86" = "y" ]; then
 fi
 if [ "$BAX88" = "y" ]; then
 	build_fw amng.ax88/release/src-rt-5.02axhnd rt-ax88u &
+	sleep 10
+fi
+if [ "$BAX92" = "y" ]; then
+	build_fw amng.ax88/release/src-rt-5.02axhnd rt-ax92u &
 	sleep 10
 fi
 if [ "$BAX58" = "y" ]; then
