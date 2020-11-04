@@ -206,6 +206,10 @@ if [ "$BAX88" = "y" ]; then
 	build_fw amng.ax88/release/src-rt-5.02axhnd rt-ax88u &
 	sleep 10
 fi
+if [ "$BAX92" = "y" ]; then
+	build_fw amng.ax88/release/src-rt-5.02axhnd rt-ax92u &
+	sleep 10
+fi
 if [ "$BAX58" = "y" ]; then
 	build_fw amng.ax58/release/src-rt-5.02axhnd.675x rt-ax58u &
 	sleep 10
