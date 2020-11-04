@@ -23,6 +23,7 @@ ln -s arm_7114 RT-AC3100
 ln -s arm_7114 RT-AC5300
 ln -s arm_94908hnd RT-AC86U
 ln -s arm_axhnd RT-AX88U
+ln -s arm_axhnd RT-AX92U
 ln -s arm_6750hnd RT-AX56U
 ln -s arm_6750hnd RT-AX58U
 
